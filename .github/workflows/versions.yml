@@ -25,7 +25,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest, macos-15-large]
+        os: [ubuntu-latest, windows-latest, macos-15-intel]
         node-version: [lts/dubnium, lts/erbium, lts/fermium, lts/*, lts/-1]
     steps:
       - uses: actions/checkout@v6
