@@ -1,6 +1,6 @@
 name: versions
 
-on: [workflow_dispatch]
+on: [push, workflow_dispatch]
 
 jobs:
   local-cache:
