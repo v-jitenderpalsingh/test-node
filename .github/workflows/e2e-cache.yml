@@ -44,7 +44,7 @@ jobs:
         run: pnpm install
       - name: Remove dependencies
         shell: pwsh
-        run: Remove-Item node_modules -Force -Recurse
+        run: Remove-Item node_modules -Force -Recurse -ErrorAction SilentlyContinue
       - name: Clean global cache
         run: rm -rf ~/.pnpm-store
         shell: bash
@@ -75,7 +75,7 @@ jobs:
         run: yarn install --ignore-engines
       - name: Remove dependencies
         shell: pwsh
-        run: Remove-Item node_modules -Force -Recurse
+        run: Remove-Item node_modules -Force -Recurse -ErrorAction SilentlyContinue
       - name: Clean global cache
         run: yarn cache clean
       - name: Setup Node
@@ -112,7 +112,7 @@ jobs:
         run: yarn install
       - name: Remove dependencies
         shell: pwsh
-        run: Remove-Item node_modules -Force -Recurse
+        run: Remove-Item node_modules -Force -Recurse -ErrorAction SilentlyContinue
       - name: Clean global cache
         run: yarn cache clean --all
       - name: Setup Node
