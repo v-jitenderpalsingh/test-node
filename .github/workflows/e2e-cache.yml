@@ -1,6 +1,6 @@
 name: e2e-cache
 
-on: [workflow_dispatch]
+on: [push, workflow_dispatch]
   
 jobs:
   node-npm-depencies-caching:
