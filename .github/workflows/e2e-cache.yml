@@ -16,7 +16,7 @@ jobs:
       - name: Clean global cache
         run: npm cache clean --force
       - name: Setup Node
-        uses: v-jitenderpalsingh/setup-node@test-1556
+        uses: v-jitenderpalsingh/setup-node@test-retry
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
@@ -49,7 +49,7 @@ jobs:
         run: rm -rf ~/.pnpm-store
         shell: bash
       - name: Setup Node
-        uses: v-jitenderpalsingh/setup-node@test-1556
+        uses: v-jitenderpalsingh/setup-node@test-retry
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
@@ -79,7 +79,7 @@ jobs:
       - name: Clean global cache
         run: yarn cache clean
       - name: Setup Node
-        uses: v-jitenderpalsingh/setup-node@test-1556
+        uses: v-jitenderpalsingh/setup-node@test-retry
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
@@ -116,7 +116,7 @@ jobs:
       - name: Clean global cache
         run: yarn cache clean --all
       - name: Setup Node
-        uses: v-jitenderpalsingh/setup-node@test-1556
+        uses: v-jitenderpalsingh/setup-node@test-retry
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
@@ -145,7 +145,7 @@ jobs:
       #    ##[debug]Cache Paths:
       #    ##[debug]["sub2/.yarn/cache","sub3/.yarn/cache","../../../.cache/yarn/v6"]
       - name: Setup Node
-        uses: v-jitenderpalsingh/setup-node@test-1556
+        uses: v-jitenderpalsingh/setup-node@test-retry
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
@@ -172,7 +172,7 @@ jobs:
       #    ##[info]All dependencies are managed locally by yarn3, the previous cache can be used
       #    ##[debug]["node-cache-Linux-yarn-401024703386272f1a950c9f014cbb1bb79a7a5b6e1fb00e8b90d06734af41ee","node-cache-Linux-yarn"]
       - name: Setup Node
-        uses: v-jitenderpalsingh/setup-node@test-1556
+        uses: v-jitenderpalsingh/setup-node@test-retry
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
@@ -199,7 +199,7 @@ jobs:
       #    ##[debug]"/home/runner/work/setup-node-test/setup-node-test/sub2" dependencies are managed by yarn 3 locally
       #    ##[debug]"/home/runner/work/setup-node-test/setup-node-test/sub3" dependencies are not managed by yarn 3 locally
       - name: Setup Node
-        uses: v-jitenderpalsingh/setup-node@test-1556
+        uses: v-jitenderpalsingh/setup-node@test-retry
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
@@ -227,7 +227,7 @@ jobs:
       #    [debug]"/home/runner/work/setup-node-test/setup-node-test/sub3" has .yarn/cache - dependencies are kept in the repository
       #    [debug]["node-cache-Linux-yarn-401024703386272f1a950c9f014cbb1bb79a7a5b6e1fb00e8b90d06734af41ee"]
       - name: Setup Node
-        uses: v-jitenderpalsingh/setup-node@test-1556
+        uses: v-jitenderpalsingh/setup-node@test-retry
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
@@ -251,7 +251,7 @@ jobs:
       - name: Clean global cache
         run: npm cache clean --force
       - name: Setup Node with caching enabled
-        uses: v-jitenderpalsingh/setup-node@test-1556
+        uses: v-jitenderpalsingh/setup-node@test-retry
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
@@ -285,7 +285,7 @@ jobs:
       - name: Clean global cache
         run: npm cache clean --force
       - name: Setup Node with caching enabled
-        uses: v-jitenderpalsingh/setup-node@test-1556
+        uses: v-jitenderpalsingh/setup-node@test-retry
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
